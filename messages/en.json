@@ -52,6 +52,10 @@
     "trashEmpty": "Trash is empty.",
     "categories": "🏷️ CATEGORIES",
     "backToHome": "Back to Home",
-    "openTrash": "🗑️ Open Trash"
+    "openTrash": "🗑️ Open Trash",
+    "catEducation": "Education",
+    "catWork": "Work",
+    "catPersonal": "Personal",
+    "catSports": "Sports"
   }
 }

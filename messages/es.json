@@ -52,6 +52,10 @@
     "trashEmpty": "La papelera está vacía.",
     "categories": "🏷️ CATEGORÍAS",
     "backToHome": "Volver al Inicio",
-    "openTrash": "🗑️ Abrir Papelera"
+    "openTrash": "🗑️ Abrir Papelera",
+    "catEducation": "Educación",
+    "catWork": "Trabajo",
+    "catPersonal": "Personal",
+    "catSports": "Deportes"
   }
 }

@@ -52,6 +52,10 @@
     "trashEmpty": "휴지통이 비어 있습니다.",
     "categories": "🏷️ 카테고리",
     "backToHome": "홈으로",
-    "openTrash": "🗑️ 휴지통 열기"
+    "openTrash": "🗑️ 휴지통 열기",
+    "catEducation": "교육",
+    "catWork": "일",
+    "catPersonal": "개인의",
+    "catSports": "스포츠"
   }
 }

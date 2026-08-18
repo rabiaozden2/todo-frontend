@@ -52,6 +52,10 @@
     "trashEmpty": "المهملات فارغة.",
     "categories": "🏷️ الفئات",
     "backToHome": "الرئيسية",
-    "openTrash": "🗑️ المهملات"
+    "openTrash": "🗑️ المهملات",
+    "catEducation": "تعليم",
+    "catWork": "عمل",
+    "catPersonal": "شخصي",
+    "catSports": "رياضة"
   }
 }

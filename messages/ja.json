@@ -52,6 +52,10 @@
     "trashEmpty": "ゴミ箱は空です。",
     "categories": "🏷️ カテゴリ",
     "backToHome": "ホームに戻る",
-    "openTrash": "🗑️ ゴミ箱を開く"
+    "openTrash": "🗑️ ゴミ箱を開く",
+    "catEducation": "教育",
+    "catWork": "仕事",
+    "catPersonal": "個人",
+    "catSports": "スポーツ"
   }
 }

@@ -52,6 +52,10 @@
     "trashEmpty": "Il cestino è vuoto.",
     "categories": "🏷️ CATEGORIE",
     "backToHome": "Torna alla Home",
-    "openTrash": "🗑️ Apri Cestino"
+    "openTrash": "🗑️ Apri Cestino",
+    "catEducation": "Educazione",
+    "catWork": "Lavoro",
+    "catPersonal": "Personale",
+    "catSports": "Sport"
   }
 }

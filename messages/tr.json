@@ -52,6 +52,10 @@
     "trashEmpty": "Çöp kutusu boş.",
     "categories": "🏷️ KATEGORİLER",
     "backToHome": "Ana Sayfaya Dön",
-    "openTrash": "🗑️ Çöp Kutusunu Aç"
+    "openTrash": "🗑️ Çöp Kutusunu Aç",
+    "catEducation": "Eğitim",
+    "catWork": "İş",
+    "catPersonal": "Kişisel",
+    "catSports": "Spor"
   }
 }

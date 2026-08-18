@@ -52,6 +52,10 @@
     "trashEmpty": "Корзина пуста.",
     "categories": "🏷️ КАТЕГОРИИ",
     "backToHome": "На главную",
-    "openTrash": "🗑️ Открыть корзину"
+    "openTrash": "🗑️ Открыть корзину",
+    "catEducation": "Образование",
+    "catWork": "Работа",
+    "catPersonal": "Личное",
+    "catSports": "Спорт"
   }
 }

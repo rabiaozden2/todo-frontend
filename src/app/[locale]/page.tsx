@@ -47,11 +47,13 @@ function MiniCalendar({ selectedDate, onSelectDate, tasks }: {
   onSelectDate: (d: Date) => void;
   tasks: Task[];
 }) {
+  const locale = useLocale();
+  const t = useTranslations('Home');
   const [viewDate, setViewDate] = useState(new Date());
   const today = new Date();
   const year = viewDate.getFullYear();
   const month = viewDate.getMonth();
-  const monthName = viewDate.toLocaleDateString('tr-TR', { month: 'long', year: 'numeric' });
+  const monthName = viewDate.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { month: 'long', year: 'numeric' });
 
   const firstDay = new Date(year, month, 1);
   let startDay = firstDay.getDay();
@@ -88,7 +90,7 @@ function MiniCalendar({ selectedDate, onSelectDate, tasks }: {
     }
   }
 
-  const dayLabels = ['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pz'];
+  const dayLabels = Array.from({ length: 7 }, (_, i) => new Date(2021, 0, 4 + i).toLocaleDateString(locale === 'en' ? 'en-US' : locale, { weekday: 'short' }));
 
   return (
     <div>
@@ -116,6 +118,7 @@ function MiniCalendar({ selectedDate, onSelectDate, tasks }: {
 
 /* ── Weekly Planner ── */
 function WeeklyPlanner({ tasks }: { tasks: Task[] }) {
+  const locale = useLocale();
   const today = new Date();
   const dayOfWeek = today.getDay();
   const mondayOffset = dayOfWeek === 0 ? -6 : 1 - dayOfWeek;
@@ -124,7 +127,7 @@ function WeeklyPlanner({ tasks }: { tasks: Task[] }) {
     d.setDate(today.getDate() + mondayOffset + i);
     return d;
   });
-  const dayNames = ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'];
+  const dayNames = Array.from({ length: 7 }, (_, i) => new Date(2021, 0, 4 + i).toLocaleDateString(locale === 'en' ? 'en-US' : locale, { weekday: 'short' }));
 
   const getTasksForDay = (date: Date) => {
     return tasks.filter(t => {
@@ -153,7 +156,7 @@ function WeeklyPlanner({ tasks }: { tasks: Task[] }) {
                   {t.title}
                   {t.due_date && (
                     <span style={{ display: 'block', fontSize: '0.6rem', opacity: 0.7, marginTop: '2px' }}>
-                      🕐 {new Date(t.due_date).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })}
+                      🕐 {new Date(t.due_date).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })}
                     </span>
                   )}
                 </div>
@@ -170,22 +173,25 @@ function WeeklyPlanner({ tasks }: { tasks: Task[] }) {
 function NotificationToast({ task, onDone, onRemind, onDismiss }: {
   task: Task; onDone: () => void; onRemind: () => void; onDismiss: () => void;
 }) {
+  const locale = useLocale();
+  const t = useTranslations('Home');
+  const tCommon = useTranslations('Common');
   return (
     <div className="notification-toast">
       <div className="notification-toast-inner">
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
           <span style={{ fontSize: '1.4rem' }}>🔔</span>
-          <strong style={{ fontSize: '0.95rem' }}>Etkinlik Hatırlatması</strong>
+          <strong style={{ fontSize: '0.95rem' }}>{t('upcoming')}</strong>
         </div>
         <p style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: '4px' }}>{task.title}</p>
         {task.due_date && (
           <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '14px' }}>
-            🕐 {new Date(task.due_date).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })} — Süre yaklaşıyor!
+            🕐 {new Date(task.due_date).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })} — Süre yaklaşıyor!
           </p>
         )}
         <div style={{ display: 'flex', gap: '8px' }}>
-          <button className="btn-notif-done" onClick={onDone}>✅ Yapıldı</button>
-          <button className="btn-notif-remind" onClick={onRemind}>⏰ 1 dk Hatırlat</button>
+          <button className="btn-notif-done" onClick={onDone}>✅ {tCommon('done') || 'Done'}</button>
+          <button className="btn-notif-remind" onClick={onRemind}>⏰ 1 min Remind</button>
           <button className="btn-notif-dismiss" onClick={onDismiss}>✕</button>
         </div>
       </div>
@@ -195,18 +201,20 @@ function NotificationToast({ task, onDone, onRemind, onDismiss }: {
 
 /* ── Selected Day Detail Panel ── */
 function SelectedDayDetail({ date, tasks, onEdit }: { date: Date; tasks: Task[]; onEdit: (t: Task) => void }) {
+  const locale = useLocale();
+  const t = useTranslations('Home');
   const dayTasks = tasks.filter(t => {
     const taskDate = t.due_date ? new Date(t.due_date) : (t.created_at ? new Date(t.created_at) : null);
     if (!taskDate) return false;
     return isSameDay(taskDate, date);
   });
-  const label = date.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' });
+  const label = date.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'long', weekday: 'long' });
 
   return (
     <div>
       <p className="heading-sub" style={{ marginBottom: '8px' }}>📌 {label}</p>
       {dayTasks.length === 0 && (
-        <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', fontSize: '0.82rem' }}>Bu gün için etkinlik yok.</p>
+        <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', fontSize: '0.82rem' }}>{t('noUpcoming')}</p>
       )}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
         {dayTasks.map(t => (
@@ -217,7 +225,7 @@ function SelectedDayDetail({ date, tasks, onEdit }: { date: Date; tasks: Task[];
             <span style={{ fontWeight: 600, textDecoration: t.status === 'completed' ? 'line-through' : 'none' }}>{t.title}</span>
             {t.due_date && (
               <span style={{ display: 'block', fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-                🕐 {new Date(t.due_date).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })}
+                🕐 {new Date(t.due_date).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })}
               </span>
             )}
           </div>
@@ -406,8 +414,8 @@ export default function Home() {
 
   const isDark = theme === 'dark';
   const today = new Date();
-  const dayName = today.toLocaleDateString('tr-TR', { weekday: 'long' });
-  const dateStr = today.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
+  const dayName = today.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { weekday: 'long' });
+  const dateStr = today.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
 
   // Task render helper to handle edit mode
   const renderTask = (task: Task, isCompleted: boolean) => {
@@ -479,7 +487,7 @@ export default function Home() {
             )}
             {task.due_date && (
               <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-                🕐 {new Date(task.due_date).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', weekday: 'short' })} — {new Date(task.due_date).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })}
+                🕐 {new Date(task.due_date).toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'short', weekday: 'short' })} — {new Date(task.due_date).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })}
               </span>
             )}
           </div>
@@ -502,7 +510,7 @@ export default function Home() {
           <Text fontWeight="bold" color="fg.muted" fontSize="sm" letterSpacing="wider">{t('title').split(' ')[0]}</Text>
           <Heading size="2xl" mt={1}>{t('title')}</Heading>
           <Text color="fg.muted" fontSize="sm" mt={1}>
-            {t('welcome', { dayName, dateStr, name: user?.full_name || 'Kullanıcı' }).replace('<bold>', '').replace('</bold>', '')}
+            {t.rich('welcome', { dayName, dateStr, name: user?.full_name || 'Kullanıcı', bold: (chunks) => <strong>{chunks}</strong> })}
           </Text>
         </Box>
         <Flex gap={2} align="center">
@@ -518,7 +526,7 @@ export default function Home() {
         {/* Sol Kolon */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           <div className="card">
-            <p className="heading-sub" style={{ marginBottom: '12px' }}>📅 Takvim</p>
+            <p className="heading-sub" style={{ marginBottom: '12px' }}>{t('calendar')}</p>
             <MiniCalendar selectedDate={selectedCalDate} onSelectDate={handleCalDateSelect} tasks={tasks.filter(t => t.status !== 'deleted')} />
             {filterByDate && (
               <button 
@@ -546,8 +554,8 @@ export default function Home() {
           </div>
 
           <div className="card">
-            <p className="heading-sub" style={{ marginBottom: '12px' }}>⏰ Yaklaşan Etkinlikler</p>
-            {upcomingTasks.length === 0 && <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', fontSize: '0.82rem' }}>Yaklaşan etkinlik yok.</p>}
+            <p className="heading-sub" style={{ marginBottom: '12px' }}>{t('upcoming')}</p>
+            {upcomingTasks.length === 0 && <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', fontSize: '0.82rem' }}>{t('noUpcoming')}</p>}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {upcomingTasks.map(task => {
                 const remaining = new Date(task.due_date!).getTime() - now.getTime();
@@ -556,7 +564,7 @@ export default function Home() {
                     <div style={{ flex: 1 }}>
                       <p style={{ fontSize: '0.85rem', fontWeight: 600 }}>{task.title}</p>
                       <p style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-                        🕐 {new Date(task.due_date!).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })} — {new Date(task.due_date!).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })}
+                        🕐 {new Date(task.due_date!).toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'short' })} — {new Date(task.due_date!).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })}
                       </p>
                     </div>
                     <span className="upcoming-badge" style={{ background: getUrgencyColor(remaining), color: 'white' }}>{formatRemaining(remaining)}</span>
@@ -572,28 +580,28 @@ export default function Home() {
           {!showTrash && (
             <>
               <div className="card">
-                <p className="heading-sub" style={{ marginBottom: '14px' }}>📋 Haftalık Görünüm</p>
+                <p className="heading-sub" style={{ marginBottom: '14px' }}>{t('weeklyView')}</p>
                 <WeeklyPlanner tasks={tasks.filter(t => t.status !== 'deleted')} />
               </div>
 
               <div className="card">
-                <p className="heading-sub" style={{ marginBottom: '10px' }}>✏️ Yeni Görev Ekle</p>
+                <p className="heading-sub" style={{ marginBottom: '10px' }}>{t('newTask')}</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <div className="input-area">
-                    <input placeholder="Görev başlığı..." value={newTask} onChange={(e) => setNewTask(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleAddTask()} />
+                    <input placeholder={t('taskTitle')} value={newTask} onChange={(e) => setNewTask(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleAddTask()} />
                   </div>
                   <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                     <div style={{ flex: 1 }}>
-                      <label style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>📌 Kategori</label>
+                      <label style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>{t('category')}</label>
                       <select value={newCategory} onChange={e => setNewCategory(e.target.value)} className="datetime-input" style={{ width: '100%' }}>
                         {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
                       </select>
                     </div>
                     <div style={{ flex: 1 }}>
-                      <label style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>📅 Tarih ve Saat (opsiyonel)</label>
+                      <label style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>{t('dateOptional')}</label>
                       <input type="datetime-local" value={newDueDate} onChange={(e) => setNewDueDate(e.target.value)} className="datetime-input" style={{ width: '100%' }} />
                     </div>
-                    <button className="btn-add" onClick={handleAddTask} disabled={loading} style={{ alignSelf: 'flex-end', padding: '12px 24px' }}>{loading ? '...' : '+ Ekle'}</button>
+                    <button className="btn-add" onClick={handleAddTask} disabled={loading} style={{ alignSelf: 'flex-end', padding: '12px 24px' }}>{loading ? '...' : tCommon('add')}</button>
                   </div>
                 </div>
               </div>
@@ -602,19 +610,19 @@ export default function Home() {
 
               <div className="card">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                  <span className="heading-sub">{filterByDate ? `${selectedCalDate.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' })} Yapılacaklar` : 'Tüm Yapılacaklar'}</span>
+                  <span className="heading-sub">{filterByDate ? `${selectedCalDate.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'long' })} Yapılacaklar` : 'Tüm Yapılacaklar'}</span>
                   <span className="tag tag-active">{activeTasks.length}</span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {activeTasks.map(t => renderTask(t, false))}
-                  {activeTasks.length === 0 && <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', fontSize: '0.88rem', padding: '8px 0' }}>🎯 Şu an yapılacak bir görevin yok.</p>}
+                  {activeTasks.length === 0 && <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', fontSize: '0.88rem', padding: '8px 0' }}>{t('noTodos')}</p>}
                 </div>
               </div>
 
               {completedTasks.length > 0 && (
                 <div className="card">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                    <span className="heading-sub">{filterByDate ? `${selectedCalDate.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' })} Tamamlananlar` : 'Tüm Tamamlananlar'}</span>
+                    <span className="heading-sub">{filterByDate ? `${selectedCalDate.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'long' })} Tamamlananlar` : 'Tüm Tamamlananlar'}</span>
                     <span className="tag tag-done">{completedTasks.length}</span>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -628,12 +636,12 @@ export default function Home() {
           {showTrash && (
             <div className="card">
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                <span className="heading-sub">🗑️ Çöp Kutusu</span>
+                <span className="heading-sub">{t('trash')}</span>
                 <span className="tag tag-active">{displayedTasks.length}</span>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 {displayedTasks.map(t => renderTask(t, false))}
-                {displayedTasks.length === 0 && <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', fontSize: '0.88rem', padding: '8px 0' }}>Çöp kutusu boş.</p>}
+                {displayedTasks.length === 0 && <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', fontSize: '0.88rem', padding: '8px 0' }}>{t('trashEmpty')}</p>}
               </div>
             </div>
           )}

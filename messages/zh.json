@@ -52,6 +52,10 @@
     "trashEmpty": "回收站是空的。",
     "categories": "🏷️ 类别",
     "backToHome": "回到首页",
-    "openTrash": "🗑️ 打开回收站"
+    "openTrash": "🗑️ 打开回收站",
+    "catEducation": "教育",
+    "catWork": "工作",
+    "catPersonal": "个人",
+    "catSports": "体育"
   }
 }

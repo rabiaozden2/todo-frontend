@@ -52,6 +52,10 @@
     "trashEmpty": "Papierkorb ist leer.",
     "categories": "🏷️ KATEGORIEN",
     "backToHome": "Zurück zur Startseite",
-    "openTrash": "🗑️ Papierkorb öffnen"
+    "openTrash": "🗑️ Papierkorb öffnen",
+    "catEducation": "Bildung",
+    "catWork": "Arbeit",
+    "catPersonal": "Persönlich",
+    "catSports": "Sport"
   }
 }

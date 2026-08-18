@@ -52,6 +52,10 @@
     "trashEmpty": "La corbeille est vide.",
     "categories": "🏷️ CATÉGORIES",
     "backToHome": "Retour à l'accueil",
-    "openTrash": "🗑️ Ouvrir la corbeille"
+    "openTrash": "🗑️ Ouvrir la corbeille",
+    "catEducation": "Éducation",
+    "catWork": "Travail",
+    "catPersonal": "Personnel",
+    "catSports": "Des sports"
   }
 }
