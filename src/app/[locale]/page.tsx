@@ -53,7 +53,7 @@ function MiniCalendar({ selectedDate, onSelectDate, tasks }: {
   const today = new Date();
   const year = viewDate.getFullYear();
   const month = viewDate.getMonth();
-  const monthName = viewDate.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { month: 'long', year: 'numeric' });
+  const monthName = viewDate.toLocaleDateString(locale, { month: 'long', year: 'numeric' });
 
   const firstDay = new Date(year, month, 1);
   let startDay = firstDay.getDay();
@@ -156,7 +156,7 @@ function WeeklyPlanner({ tasks }: { tasks: Task[] }) {
                   {t.title}
                   {t.due_date && (
                     <span style={{ display: 'block', fontSize: '0.6rem', opacity: 0.7, marginTop: '2px' }}>
-                      🕐 {new Date(t.due_date).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })}
+                      🕐 {new Date(t.due_date).toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })}
                     </span>
                   )}
                 </div>
@@ -186,7 +186,7 @@ function NotificationToast({ task, onDone, onRemind, onDismiss }: {
         <p style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: '4px' }}>{task.title}</p>
         {task.due_date && (
           <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '14px' }}>
-            🕐 {new Date(task.due_date).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })} — Süre yaklaşıyor!
+            🕐 {new Date(task.due_date).toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })} — Süre yaklaşıyor!
           </p>
         )}
         <div style={{ display: 'flex', gap: '8px' }}>
@@ -208,7 +208,7 @@ function SelectedDayDetail({ date, tasks, onEdit }: { date: Date; tasks: Task[];
     if (!taskDate) return false;
     return isSameDay(taskDate, date);
   });
-  const label = date.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'long', weekday: 'long' });
+  const label = date.toLocaleDateString(locale, { day: 'numeric', month: 'long', weekday: 'long' });
 
   return (
     <div>
@@ -225,7 +225,7 @@ function SelectedDayDetail({ date, tasks, onEdit }: { date: Date; tasks: Task[];
             <span style={{ fontWeight: 600, textDecoration: t.status === 'completed' ? 'line-through' : 'none' }}>{t.title}</span>
             {t.due_date && (
               <span style={{ display: 'block', fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-                🕐 {new Date(t.due_date).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })}
+                🕐 {new Date(t.due_date).toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })}
               </span>
             )}
           </div>
@@ -414,8 +414,8 @@ export default function Home() {
 
   const isDark = theme === 'dark';
   const today = new Date();
-  const dayName = today.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { weekday: 'long' });
-  const dateStr = today.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
+  const dayName = today.toLocaleDateString(locale, { weekday: 'long' });
+  const dateStr = today.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
 
   // Task render helper to handle edit mode
   const renderTask = (task: Task, isCompleted: boolean) => {
@@ -487,7 +487,7 @@ export default function Home() {
             )}
             {task.due_date && (
               <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-                🕐 {new Date(task.due_date).toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'short', weekday: 'short' })} — {new Date(task.due_date).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })}
+                🕐 {new Date(task.due_date).toLocaleDateString(locale, { day: 'numeric', month: 'short', weekday: 'short' })} — {new Date(task.due_date).toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })}
               </span>
             )}
           </div>
@@ -564,7 +564,7 @@ export default function Home() {
                     <div style={{ flex: 1 }}>
                       <p style={{ fontSize: '0.85rem', fontWeight: 600 }}>{task.title}</p>
                       <p style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-                        🕐 {new Date(task.due_date!).toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'short' })} — {new Date(task.due_date!).toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { hour: '2-digit', minute: '2-digit' })}
+                        🕐 {new Date(task.due_date!).toLocaleDateString(locale, { day: 'numeric', month: 'short' })} — {new Date(task.due_date!).toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })}
                       </p>
                     </div>
                     <span className="upcoming-badge" style={{ background: getUrgencyColor(remaining), color: 'white' }}>{formatRemaining(remaining)}</span>
