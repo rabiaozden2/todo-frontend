@@ -56,6 +56,9 @@
     "catEducation": "Educación",
     "catWork": "Trabajo",
     "catPersonal": "Personal",
-    "catSports": "Deportes"
+    "catSports": "Deportes",
+    "timesUp": "¡El tiempo se ha agotado!",
+    "hoursMins": "{hours}h {mins}m",
+    "minsOnly": "{mins} m"
   }
 }

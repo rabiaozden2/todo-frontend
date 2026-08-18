@@ -12,8 +12,8 @@ import { logout } from '../../store/slices/authSlice';
 import { RootState } from '../../store/store';
 
 /* ── Helpers ── */
-function formatRemaining(ms: number): string {
-  if (ms <= 0) return 'Süre doldu!';
+function formatRemaining(ms: number, t: any): string {
+  if (ms <= 0) return t('timesUp');
   const totalMin = Math.floor(ms / 60000);
   const hours = Math.floor(totalMin / 60);
   const mins = totalMin % 60;
@@ -21,8 +21,8 @@ function formatRemaining(ms: number): string {
     const days = Math.floor(hours / 24);
     return `${days}g ${hours % 24}s`;
   }
-  if (hours > 0) return `${hours}s ${mins}dk`;
-  if (mins > 0) return `${mins} dk`;
+  if (hours > 0) return t('hoursMins', { hours, mins });
+  if (mins > 0) return t('minsOnly', { mins });
   return `${Math.floor(ms / 1000)} sn`;
 }
 
@@ -567,7 +567,7 @@ export default function Home() {
                         🕐 {new Date(task.due_date!).toLocaleDateString(locale, { day: 'numeric', month: 'short' })} — {new Date(task.due_date!).toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })}
                       </p>
                     </div>
-                    <span className="upcoming-badge" style={{ background: getUrgencyColor(remaining), color: 'white' }}>{formatRemaining(remaining)}</span>
+                    <span className="upcoming-badge" style={{ background: getUrgencyColor(remaining), color: 'white' }}>{formatRemaining(remaining, t)}</span>
                   </div>
                 );
               })}
@@ -650,7 +650,7 @@ export default function Home() {
         {/* Sağ Kolon: Kategoriler & Araçlar */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           <div className="card" style={{ position: 'sticky', top: '32px' }}>
-            <p className="heading-sub" style={{ marginBottom: '16px' }}>🏷️ KATEGORİLER {filterByDate && !showTrash && `(${selectedCalDate.getDate()}/${selectedCalDate.getMonth() + 1})`}</p>
+            <p className="heading-sub" style={{ marginBottom: '16px' }}>{t('categories')} {filterByDate && !showTrash && `(${selectedCalDate.getDate()}/${selectedCalDate.getMonth() + 1})`}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {CATEGORIES.map(cat => {
                 const count = activeTasks.filter(t => (t.category || 'Kişisel') === cat).length;
@@ -671,7 +671,7 @@ export default function Home() {
               onClick={() => setShowTrash(!showTrash)} 
               style={{ width: '100%', padding: '10px', background: showTrash ? 'var(--accent-danger)' : 'transparent', color: showTrash ? 'white' : 'var(--text-secondary)', border: `1px solid ${showTrash ? 'transparent' : 'var(--border-color)'}`, borderRadius: '8px', fontWeight: 600, cursor: 'pointer', display: 'flex', justifyContent: 'center', gap: '8px' }}
             >
-              {showTrash ? 'Ana Sayfaya Dön' : '🗑️ Çöp Kutusunu Aç'}
+              {showTrash ? t('backToHome') : t('openTrash')}
             </button>
           </div>
         </div>

@@ -56,6 +56,9 @@
     "catEducation": "Eğitim",
     "catWork": "İş",
     "catPersonal": "Kişisel",
-    "catSports": "Spor"
+    "catSports": "Spor",
+    "timesUp": "Süre doldu!",
+    "hoursMins": "{hours}s {mins}dk",
+    "minsOnly": "{mins} dk"
   }
 }

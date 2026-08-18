@@ -56,6 +56,9 @@
     "catEducation": "教育",
     "catWork": "仕事",
     "catPersonal": "個人",
-    "catSports": "スポーツ"
+    "catSports": "スポーツ",
+    "timesUp": "時間切れです！",
+    "hoursMins": "{hours}時間 {mins}分",
+    "minsOnly": "{mins} 分"
   }
 }

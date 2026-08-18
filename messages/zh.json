@@ -56,6 +56,9 @@
     "catEducation": "教育",
     "catWork": "工作",
     "catPersonal": "个人",
-    "catSports": "体育"
+    "catSports": "体育",
+    "timesUp": "时间到了！",
+    "hoursMins": "{hours}小时 {mins}分钟",
+    "minsOnly": "{mins} 分钟"
   }
 }

@@ -56,6 +56,9 @@
     "catEducation": "تعليم",
     "catWork": "عمل",
     "catPersonal": "شخصي",
-    "catSports": "رياضة"
+    "catSports": "رياضة",
+    "timesUp": "انتهى الوقت!",
+    "hoursMins": "{hours}س {mins}د",
+    "minsOnly": "{mins} د"
   }
 }

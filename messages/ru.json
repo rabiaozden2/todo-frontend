@@ -56,6 +56,9 @@
     "catEducation": "Образование",
     "catWork": "Работа",
     "catPersonal": "Личное",
-    "catSports": "Спорт"
+    "catSports": "Спорт",
+    "timesUp": "Время вышло!",
+    "hoursMins": "{hours}ч {mins}м",
+    "minsOnly": "{mins} м"
   }
 }
