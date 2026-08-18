@@ -540,16 +540,16 @@ export default function Home() {
 
           <div className="card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-              <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)' }}>İlerleme {filterByDate && `(${selectedCalDate.getDate()}/${selectedCalDate.getMonth() + 1})`}</span>
+              <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)' }}>{t('progress')} {filterByDate && `(${selectedCalDate.getDate()}/${selectedCalDate.getMonth() + 1})`}</span>
               <span style={{ fontSize: '0.82rem', fontWeight: 700, color: progress === 100 ? 'var(--accent-secondary)' : 'var(--accent-primary)' }}>{progress}%</span>
             </div>
             <div className="progress-track">
               <div className="progress-bar" style={{ width: `${progress}%` }} />
             </div>
-            {progress === 100 && totalTasks > 0 && <p style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.8rem', color: 'var(--accent-secondary)', fontWeight: 600 }}>🎉 {filterByDate ? 'Bugünün' : 'Tüm'} görevleri tamam!</p>}
+            {progress === 100 && totalTasks > 0 && <p style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.8rem', color: 'var(--accent-secondary)', fontWeight: 600 }}>🎉 {t('allTasksDone')}</p>}
             <div style={{ marginTop: '12px', display: 'flex', gap: '8px' }}>
-              <span className="tag tag-active">Aktif: {activeTasks.length}</span>
-              <span className="tag tag-done">Bitti: {completedTasks.length}</span>
+              <span className="tag tag-active">{t('active')}: {activeTasks.length}</span>
+              <span className="tag tag-done">{t('done')}: {completedTasks.length}</span>
             </div>
           </div>
 
@@ -610,7 +610,7 @@ export default function Home() {
 
               <div className="card">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                  <span className="heading-sub">{filterByDate ? `${selectedCalDate.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'long' })} Yapılacaklar` : 'Tüm Yapılacaklar'}</span>
+                  <span className="heading-sub">{filterByDate ? `${selectedCalDate.toLocaleDateString(locale === 'en' ? 'en-US' : locale, { day: 'numeric', month: 'long' })}` : t('allTodos')}</span>
                   <span className="tag tag-active">{activeTasks.length}</span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -622,7 +622,7 @@ export default function Home() {
               {completedTasks.length > 0 && (
                 <div className="card">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                    <span className="heading-sub">{filterByDate ? `${selectedCalDate.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'en' ? 'en-US' : 'tr-TR', { day: 'numeric', month: 'long' })} Tamamlananlar` : 'Tüm Tamamlananlar'}</span>
+                    <span className="heading-sub">{filterByDate ? `${selectedCalDate.toLocaleDateString(locale === 'en' ? 'en-US' : locale, { day: 'numeric', month: 'long' })}` : t('allCompleted')}</span>
                     <span className="tag tag-done">{completedTasks.length}</span>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
