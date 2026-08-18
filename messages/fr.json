@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "logout": "Déconnexion",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "fullName": "Nom complet",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "add": "+ Ajouter",
+    "loading": "Chargement..."
+  },
+  "Login": {
+    "title": "Connexion",
+    "emailPlaceholder": "exemple@email.com",
+    "passwordPlaceholder": "Votre mot de passe",
+    "noAccount": "Pas de compte ?",
+    "registerLink": "S'inscrire"
+  },
+  "Register": {
+    "title": "S'inscrire",
+    "fullNamePlaceholder": "Jean Dupont",
+    "emailPlaceholder": "exemple@email.com",
+    "passwordPlaceholder": "Mot de passe fort",
+    "hasAccount": "Déjà un compte ?",
+    "loginLink": "Connexion"
+  },
+  "Home": {
+    "title": "DT-Journal 📒",
+    "welcome": "{dayName}, {dateStr} · Bienvenue, <bold>{name}</bold>",
+    "themeLight": "☀️ Clair",
+    "themeDark": "🌙 Sombre",
+    "calendar": "📅 Calendrier",
+    "showAllDays": "Afficher tous",
+    "progress": "Progrès",
+    "allTasksDone": "🎉 Toutes les tâches terminées !",
+    "active": "Actif",
+    "done": "Terminé",
+    "upcoming": "⏰ Événements à venir",
+    "noUpcoming": "Aucun événement à venir.",
+    "weeklyView": "📋 Vue Hebdomadaire",
+    "newTask": "✏️ Nouvelle tâche",
+    "taskTitle": "Titre de la tâche...",
+    "category": "📌 Catégorie",
+    "dateOptional": "📅 Date et heure (facultatif)",
+    "allTodos": "Toutes les Tâches",
+    "noTodos": "🎯 Vous n'avez pas de tâches.",
+    "allCompleted": "Tout Terminé",
+    "trash": "🗑️ Corbeille",
+    "trashEmpty": "La corbeille est vide.",
+    "categories": "🏷️ CATÉGORIES",
+    "backToHome": "Retour à l'accueil",
+    "openTrash": "🗑️ Ouvrir la corbeille"
+  }
+}

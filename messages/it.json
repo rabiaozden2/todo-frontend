@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "Accedi",
+    "register": "Registrati",
+    "logout": "Esci",
+    "email": "Email",
+    "password": "Password",
+    "fullName": "Nome completo",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "add": "+ Aggiungi",
+    "loading": "Caricamento..."
+  },
+  "Login": {
+    "title": "Accedi",
+    "emailPlaceholder": "esempio@email.com",
+    "passwordPlaceholder": "La tua password",
+    "noAccount": "Non hai un account?",
+    "registerLink": "Registrati"
+  },
+  "Register": {
+    "title": "Registrati",
+    "fullNamePlaceholder": "Mario Rossi",
+    "emailPlaceholder": "esempio@email.com",
+    "passwordPlaceholder": "Password forte",
+    "hasAccount": "Hai già un account?",
+    "loginLink": "Accedi"
+  },
+  "Home": {
+    "title": "DT-Diario 📒",
+    "welcome": "{dayName}, {dateStr} · Benvenuto, <bold>{name}</bold>",
+    "themeLight": "☀️ Chiaro",
+    "themeDark": "🌙 Scuro",
+    "calendar": "📅 Calendario",
+    "showAllDays": "Mostra tutti",
+    "progress": "Progresso",
+    "allTasksDone": "🎉 Tutte le attività completate!",
+    "active": "Attivo",
+    "done": "Fatto",
+    "upcoming": "⏰ Prossimi eventi",
+    "noUpcoming": "Nessun evento in arrivo.",
+    "weeklyView": "📋 Vista Settimanale",
+    "newTask": "✏️ Nuova attività",
+    "taskTitle": "Titolo attività...",
+    "category": "📌 Categoria",
+    "dateOptional": "📅 Data e ora (opzionale)",
+    "allTodos": "Tutte le Attività",
+    "noTodos": "🎯 Non hai attività al momento.",
+    "allCompleted": "Tutto Completato",
+    "trash": "🗑️ Cestino",
+    "trashEmpty": "Il cestino è vuoto.",
+    "categories": "🏷️ CATEGORIE",
+    "backToHome": "Torna alla Home",
+    "openTrash": "🗑️ Apri Cestino"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "Войти",
+    "register": "Регистрация",
+    "logout": "Выйти",
+    "email": "Эл. почта",
+    "password": "Пароль",
+    "fullName": "Полное имя",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "add": "+ Добавить",
+    "loading": "Загрузка..."
+  },
+  "Login": {
+    "title": "Войти",
+    "emailPlaceholder": "пример@email.com",
+    "passwordPlaceholder": "Ваш пароль",
+    "noAccount": "Нет аккаунта?",
+    "registerLink": "Регистрация"
+  },
+  "Register": {
+    "title": "Регистрация",
+    "fullNamePlaceholder": "Иван Иванов",
+    "emailPlaceholder": "пример@email.com",
+    "passwordPlaceholder": "Сложный пароль",
+    "hasAccount": "Уже есть аккаунт?",
+    "loginLink": "Войти"
+  },
+  "Home": {
+    "title": "DT-Дневник 📒",
+    "welcome": "{dayName}, {dateStr} · Добро пожаловать, <bold>{name}</bold>",
+    "themeLight": "☀️ Светлая",
+    "themeDark": "🌙 Темная",
+    "calendar": "📅 Календарь",
+    "showAllDays": "Показать все",
+    "progress": "Прогресс",
+    "allTasksDone": "🎉 Все задачи выполнены!",
+    "active": "Актив",
+    "done": "Готово",
+    "upcoming": "⏰ Предстоящие",
+    "noUpcoming": "Нет предстоящих событий.",
+    "weeklyView": "📋 Неделя",
+    "newTask": "✏️ Новая задача",
+    "taskTitle": "Название...",
+    "category": "📌 Категория",
+    "dateOptional": "📅 Дата и время",
+    "allTodos": "Все задачи",
+    "noTodos": "🎯 Нет задач.",
+    "allCompleted": "Завершенные",
+    "trash": "🗑️ Корзина",
+    "trashEmpty": "Корзина пуста.",
+    "categories": "🏷️ КАТЕГОРИИ",
+    "backToHome": "На главную",
+    "openTrash": "🗑️ Открыть корзину"
+  }
+}

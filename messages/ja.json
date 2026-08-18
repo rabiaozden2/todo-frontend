@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "ログイン",
+    "register": "登録",
+    "logout": "ログアウト",
+    "email": "メール",
+    "password": "パスワード",
+    "fullName": "氏名",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "add": "+ 追加",
+    "loading": "読み込み中..."
+  },
+  "Login": {
+    "title": "ログイン",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "パスワード",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "registerLink": "登録"
+  },
+  "Register": {
+    "title": "登録",
+    "fullNamePlaceholder": "山田 太郎",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "強力なパスワード",
+    "hasAccount": "すでにアカウントをお持ちですか？",
+    "loginLink": "ログイン"
+  },
+  "Home": {
+    "title": "DT-日記 📒",
+    "welcome": "{dayName}, {dateStr} · ようこそ, <bold>{name}</bold>",
+    "themeLight": "☀️ ライト",
+    "themeDark": "🌙 ダーク",
+    "calendar": "📅 カレンダー",
+    "showAllDays": "すべて表示",
+    "progress": "進行状況",
+    "allTasksDone": "🎉 全てのタスクが完了しました！",
+    "active": "アクティブ",
+    "done": "完了",
+    "upcoming": "⏰ 予定",
+    "noUpcoming": "予定はありません。",
+    "weeklyView": "📋 週間ビュー",
+    "newTask": "✏️ 新しいタスク",
+    "taskTitle": "タスク名...",
+    "category": "📌 カテゴリ",
+    "dateOptional": "📅 日時 (任意)",
+    "allTodos": "すべてのタスク",
+    "noTodos": "🎯 現在タスクはありません。",
+    "allCompleted": "完了済み",
+    "trash": "🗑️ ゴミ箱",
+    "trashEmpty": "ゴミ箱は空です。",
+    "categories": "🏷️ カテゴリ",
+    "backToHome": "ホームに戻る",
+    "openTrash": "🗑️ ゴミ箱を開く"
+  }
+}

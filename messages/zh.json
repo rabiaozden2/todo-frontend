@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "登录",
+    "register": "注册",
+    "logout": "登出",
+    "email": "电子邮件",
+    "password": "密码",
+    "fullName": "全名",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "add": "+ 添加",
+    "loading": "加载中..."
+  },
+  "Login": {
+    "title": "登录",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "您的密码",
+    "noAccount": "没有账户？",
+    "registerLink": "注册"
+  },
+  "Register": {
+    "title": "注册",
+    "fullNamePlaceholder": "姓名",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "强密码",
+    "hasAccount": "已有账户？",
+    "loginLink": "登录"
+  },
+  "Home": {
+    "title": "DT-日记 📒",
+    "welcome": "{dayName}, {dateStr} · 欢迎, <bold>{name}</bold>",
+    "themeLight": "☀️ 亮色",
+    "themeDark": "🌙 暗色",
+    "calendar": "📅 日历",
+    "showAllDays": "显示所有",
+    "progress": "进度",
+    "allTasksDone": "🎉 任务已完成！",
+    "active": "进行中",
+    "done": "已完成",
+    "upcoming": "⏰ 即将到来",
+    "noUpcoming": "没有即将到来的事件。",
+    "weeklyView": "📋 周视图",
+    "newTask": "✏️ 新任务",
+    "taskTitle": "任务标题...",
+    "category": "📌 类别",
+    "dateOptional": "📅 日期和时间",
+    "allTodos": "所有任务",
+    "noTodos": "🎯 暂无任务。",
+    "allCompleted": "已完成",
+    "trash": "🗑️ 回收站",
+    "trashEmpty": "回收站是空的。",
+    "categories": "🏷️ 类别",
+    "backToHome": "回到首页",
+    "openTrash": "🗑️ 打开回收站"
+  }
+}

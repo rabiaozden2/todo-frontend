@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
+    "email": "Correo",
+    "password": "Contraseña",
+    "fullName": "Nombre completo",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "add": "+ Añadir",
+    "loading": "Cargando..."
+  },
+  "Login": {
+    "title": "Iniciar sesión",
+    "emailPlaceholder": "ejemplo@correo.com",
+    "passwordPlaceholder": "Tu Contraseña",
+    "noAccount": "¿No tienes cuenta?",
+    "registerLink": "Registrarse"
+  },
+  "Register": {
+    "title": "Registrarse",
+    "fullNamePlaceholder": "Juan Pérez",
+    "emailPlaceholder": "ejemplo@correo.com",
+    "passwordPlaceholder": "Contraseña Fuerte",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "loginLink": "Iniciar sesión"
+  },
+  "Home": {
+    "title": "DT-Diario 📒",
+    "welcome": "{dayName}, {dateStr} · Bienvenido, <bold>{name}</bold>",
+    "themeLight": "☀️ Claro",
+    "themeDark": "🌙 Oscuro",
+    "calendar": "📅 Calendario",
+    "showAllDays": "Mostrar todos",
+    "progress": "Progreso",
+    "allTasksDone": "🎉 ¡Todas las tareas listas!",
+    "active": "Activo",
+    "done": "Hecho",
+    "upcoming": "⏰ Próximos eventos",
+    "noUpcoming": "Sin eventos próximos.",
+    "weeklyView": "📋 Vista Semanal",
+    "newTask": "✏️ Nueva Tarea",
+    "taskTitle": "Título de la tarea...",
+    "category": "📌 Categoría",
+    "dateOptional": "📅 Fecha y Hora (opcional)",
+    "allTodos": "Todas las Tareas",
+    "noTodos": "🎯 No tienes tareas ahora.",
+    "allCompleted": "Todo Completado",
+    "trash": "🗑️ Papelera",
+    "trashEmpty": "La papelera está vacía.",
+    "categories": "🏷️ CATEGORÍAS",
+    "backToHome": "Volver al Inicio",
+    "openTrash": "🗑️ Abrir Papelera"
+  }
+}

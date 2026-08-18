@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "fullName": "Full Name",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "add": "+ Add",
+    "loading": "Loading..."
+  },
+  "Login": {
+    "title": "Login",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "Your Password",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Register"
+  },
+  "Register": {
+    "title": "Register",
+    "fullNamePlaceholder": "John Doe",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "Strong Password",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Login"
+  },
+  "Home": {
+    "title": "DT-Diary 📒",
+    "welcome": "{dayName}, {dateStr} · Welcome, <bold>{name}</bold>",
+    "themeLight": "☀️ Light",
+    "themeDark": "🌙 Dark",
+    "calendar": "📅 Calendar",
+    "showAllDays": "Show All Days",
+    "progress": "Progress",
+    "allTasksDone": "🎉 All tasks are done!",
+    "active": "Active",
+    "done": "Done",
+    "upcoming": "⏰ Upcoming Events",
+    "noUpcoming": "No upcoming events.",
+    "weeklyView": "📋 Weekly View",
+    "newTask": "✏️ Add New Task",
+    "taskTitle": "Task title...",
+    "category": "📌 Category",
+    "dateOptional": "📅 Date and Time (optional)",
+    "allTodos": "All Todos",
+    "noTodos": "🎯 You have no tasks to do right now.",
+    "allCompleted": "All Completed",
+    "trash": "🗑️ Trash",
+    "trashEmpty": "Trash is empty.",
+    "categories": "🏷️ CATEGORIES",
+    "backToHome": "Back to Home",
+    "openTrash": "🗑️ Open Trash"
+  }
+}

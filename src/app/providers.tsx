@@ -1,18 +1,18 @@
 'use client';
 
-import { ChakraProvider, defaultSystem } from '@chakra-ui/react';
-import { Provider } from 'react-redux';
+import { Provider as ChakraUIProvider } from '@/components/ui/provider';
+import { Provider as ReduxProvider } from 'react-redux';
 import { store } from '../store/store';
 import { ThemeProvider } from 'next-themes';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <Provider store={store}>
-      <ChakraProvider value={defaultSystem}>
-        <ThemeProvider attribute="class" disableTransitionOnChange>
+    <ReduxProvider store={store}>
+      <ChakraUIProvider>
+        <ThemeProvider attribute="class" disableTransitionOnChange defaultTheme="dark">
           {children}
         </ThemeProvider>
-      </ChakraProvider>
-    </Provider>
+      </ChakraUIProvider>
+    </ReduxProvider>
   );
 }

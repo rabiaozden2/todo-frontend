@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "fullName": "Vollständiger Name",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "add": "+ Hinzufügen",
+    "loading": "Wird geladen..."
+  },
+  "Login": {
+    "title": "Anmelden",
+    "emailPlaceholder": "beispiel@email.com",
+    "passwordPlaceholder": "Dein Passwort",
+    "noAccount": "Kein Konto?",
+    "registerLink": "Registrieren"
+  },
+  "Register": {
+    "title": "Registrieren",
+    "fullNamePlaceholder": "Max Mustermann",
+    "emailPlaceholder": "beispiel@email.com",
+    "passwordPlaceholder": "Starkes Passwort",
+    "hasAccount": "Hast du bereits ein Konto?",
+    "loginLink": "Anmelden"
+  },
+  "Home": {
+    "title": "DT-Tagebuch 📒",
+    "welcome": "{dayName}, {dateStr} · Willkommen, <bold>{name}</bold>",
+    "themeLight": "☀️ Hell",
+    "themeDark": "🌙 Dunkel",
+    "calendar": "📅 Kalender",
+    "showAllDays": "Alle Tage anzeigen",
+    "progress": "Fortschritt",
+    "allTasksDone": "🎉 Alle Aufgaben erledigt!",
+    "active": "Aktiv",
+    "done": "Erledigt",
+    "upcoming": "⏰ Anstehende Ereignisse",
+    "noUpcoming": "Keine anstehenden Ereignisse.",
+    "weeklyView": "📋 Wochenansicht",
+    "newTask": "✏️ Neue Aufgabe hinzufügen",
+    "taskTitle": "Aufgabentitel...",
+    "category": "📌 Kategorie",
+    "dateOptional": "📅 Datum und Uhrzeit (optional)",
+    "allTodos": "Alle Aufgaben",
+    "noTodos": "🎯 Du hast gerade keine Aufgaben.",
+    "allCompleted": "Alle Abgeschlossenen",
+    "trash": "🗑️ Papierkorb",
+    "trashEmpty": "Papierkorb ist leer.",
+    "categories": "🏷️ KATEGORIEN",
+    "backToHome": "Zurück zur Startseite",
+    "openTrash": "🗑️ Papierkorb öffnen"
+  }
+}

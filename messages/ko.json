@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "로그인",
+    "register": "가입하기",
+    "logout": "로그아웃",
+    "email": "이메일",
+    "password": "비밀번호",
+    "fullName": "성명",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "add": "+ 추가",
+    "loading": "로딩 중..."
+  },
+  "Login": {
+    "title": "로그인",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "비밀번호",
+    "noAccount": "계정이 없으신가요?",
+    "registerLink": "가입하기"
+  },
+  "Register": {
+    "title": "가입하기",
+    "fullNamePlaceholder": "홍길동",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "강력한 비밀번호",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "loginLink": "로그인"
+  },
+  "Home": {
+    "title": "DT-일기 📒",
+    "welcome": "{dayName}, {dateStr} · 환영합니다, <bold>{name}</bold>",
+    "themeLight": "☀️ 라이트",
+    "themeDark": "🌙 다크",
+    "calendar": "📅 달력",
+    "showAllDays": "모두 보기",
+    "progress": "진행률",
+    "allTasksDone": "🎉 모든 작업 완료!",
+    "active": "진행 중",
+    "done": "완료",
+    "upcoming": "⏰ 다가오는 이벤트",
+    "noUpcoming": "예정된 이벤트가 없습니다.",
+    "weeklyView": "📋 주간 보기",
+    "newTask": "✏️ 새 작업",
+    "taskTitle": "작업 제목...",
+    "category": "📌 카테고리",
+    "dateOptional": "📅 날짜 및 시간",
+    "allTodos": "모든 작업",
+    "noTodos": "🎯 현재 작업이 없습니다.",
+    "allCompleted": "완료된 작업",
+    "trash": "🗑️ 휴지통",
+    "trashEmpty": "휴지통이 비어 있습니다.",
+    "categories": "🏷️ 카테고리",
+    "backToHome": "홈으로",
+    "openTrash": "🗑️ 휴지통 열기"
+  }
+}

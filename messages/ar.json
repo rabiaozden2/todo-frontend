@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "تسجيل الدخول",
+    "register": "تسجيل",
+    "logout": "خروج",
+    "email": "البريد",
+    "password": "كلمة المرور",
+    "fullName": "الاسم الكامل",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "add": "+ إضافة",
+    "loading": "جار التحميل..."
+  },
+  "Login": {
+    "title": "تسجيل الدخول",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "كلمة المرور",
+    "noAccount": "ليس لديك حساب؟",
+    "registerLink": "تسجيل"
+  },
+  "Register": {
+    "title": "تسجيل",
+    "fullNamePlaceholder": "الاسم",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "كلمة مرور قوية",
+    "hasAccount": "لديك حساب؟",
+    "loginLink": "تسجيل الدخول"
+  },
+  "Home": {
+    "title": "DT-يوميات 📒",
+    "welcome": "{dayName}, {dateStr} · أهلاً بك, <bold>{name}</bold>",
+    "themeLight": "☀️ فاتح",
+    "themeDark": "🌙 داكن",
+    "calendar": "📅 التقويم",
+    "showAllDays": "عرض الكل",
+    "progress": "التقدم",
+    "allTasksDone": "🎉 جميع المهام منجزة!",
+    "active": "نشط",
+    "done": "تم",
+    "upcoming": "⏰ أحداث قادمة",
+    "noUpcoming": "لا توجد أحداث.",
+    "weeklyView": "📋 عرض أسبوعي",
+    "newTask": "✏️ مهمة جديدة",
+    "taskTitle": "عنوان المهمة...",
+    "category": "📌 فئة",
+    "dateOptional": "📅 التاريخ (اختياري)",
+    "allTodos": "كل المهام",
+    "noTodos": "🎯 لا توجد مهام.",
+    "allCompleted": "المكتملة",
+    "trash": "🗑️ المهملات",
+    "trashEmpty": "المهملات فارغة.",
+    "categories": "🏷️ الفئات",
+    "backToHome": "الرئيسية",
+    "openTrash": "🗑️ المهملات"
+  }
+}

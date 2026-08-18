@@ -1,0 +1,57 @@
+{
+  "Common": {
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "logout": "Çıkış Yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "fullName": "Ad Soyad",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "add": "+ Ekle",
+    "loading": "Yükleniyor..."
+  },
+  "Login": {
+    "title": "Giriş Yap",
+    "emailPlaceholder": "ornek@email.com",
+    "passwordPlaceholder": "Şifreniz",
+    "noAccount": "Hesabın yok mu?",
+    "registerLink": "Kayıt Ol"
+  },
+  "Register": {
+    "title": "Kayıt Ol",
+    "fullNamePlaceholder": "İsim Soyisim",
+    "emailPlaceholder": "ornek@email.com",
+    "passwordPlaceholder": "Güçlü Parola",
+    "hasAccount": "Zaten hesabın var mı?",
+    "loginLink": "Giriş Yap"
+  },
+  "Home": {
+    "title": "DT-Günlüğüm 📒",
+    "welcome": "{dayName}, {dateStr} · Hoşgeldin, <bold>{name}</bold>",
+    "themeLight": "☀️ Aydınlık",
+    "themeDark": "🌙 Karanlık",
+    "calendar": "📅 Takvim",
+    "showAllDays": "Tüm Günleri Göster",
+    "progress": "İlerleme",
+    "allTasksDone": "🎉 Tüm görevleri tamam!",
+    "active": "Aktif",
+    "done": "Bitti",
+    "upcoming": "⏰ Yaklaşan Etkinlikler",
+    "noUpcoming": "Yaklaşan etkinlik yok.",
+    "weeklyView": "📋 Haftalık Görünüm",
+    "newTask": "✏️ Yeni Görev Ekle",
+    "taskTitle": "Görev başlığı...",
+    "category": "📌 Kategori",
+    "dateOptional": "📅 Tarih ve Saat (opsiyonel)",
+    "allTodos": "Tüm Yapılacaklar",
+    "noTodos": "🎯 Şu an yapılacak bir görevin yok.",
+    "allCompleted": "Tüm Tamamlananlar",
+    "trash": "🗑️ Çöp Kutusu",
+    "trashEmpty": "Çöp kutusu boş.",
+    "categories": "🏷️ KATEGORİLER",
+    "backToHome": "Ana Sayfaya Dön",
+    "openTrash": "🗑️ Çöp Kutusunu Aç"
+  }
+}
