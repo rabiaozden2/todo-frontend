@@ -59,6 +59,9 @@
     "catSports": "스포츠",
     "timesUp": "시간이 다 되었습니다!",
     "hoursMins": "{hours}시간 {mins}분",
-    "minsOnly": "{mins} 분"
+    "minsOnly": "{mins} 분",
+    "restore": "복원",
+    "deleteForever": "영구 삭제",
+    "confirmDelete": "영구적으로 삭제하시겠습니까?"
   }
 }

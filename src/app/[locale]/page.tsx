@@ -426,8 +426,8 @@ export default function Home() {
             <span style={{ fontWeight: 500, fontSize: '0.92rem', color: 'var(--text-muted)', textDecoration: 'line-through' }}>{task.title}</span>
           </div>
           <div style={{ display: 'flex', gap: '8px' }}>
-            <button className="btn-add" style={{ padding: '4px 10px', fontSize: '0.75rem', borderRadius: '6px' }} onClick={() => dispatch(updateTaskRequest({ id: task.id, status: 'todo' }))}>Geri Al</button>
-            <button className="btn-delete" style={{ padding: '4px 10px', fontSize: '0.75rem', borderRadius: '6px' }} onClick={() => confirm('Kalıcı olarak silmek istediğine emin misin?') && dispatch(deleteTaskRequest(task.id))}>Kalıcı Sil</button>
+            <button className="btn-add" style={{ padding: '4px 10px', fontSize: '0.75rem', borderRadius: '6px' }} onClick={() => dispatch(updateTaskRequest({ id: task.id, status: 'todo' }))}>{t('restore')}</button>
+            <button className="btn-delete" style={{ padding: '4px 10px', fontSize: '0.75rem', borderRadius: '6px' }} onClick={() => confirm(t('confirmDelete')) && dispatch(deleteTaskRequest(task.id))}>{t('deleteForever')}</button>
           </div>
         </div>
       );
@@ -459,8 +459,8 @@ export default function Home() {
             />
           </div>
           <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
-            <button className="btn-delete" onClick={() => setEditingTaskId(null)}>İptal</button>
-            <button className="btn-notif-done" onClick={saveEdit} style={{ padding: '4px 12px', fontSize: '0.75rem' }}>Kaydet</button>
+            <button className="btn-delete" onClick={() => setEditingTaskId(null)}>{tCommon('cancel')}</button>
+            <button className="btn-notif-done" onClick={saveEdit} style={{ padding: '4px 12px', fontSize: '0.75rem' }}>{tCommon('save')}</button>
           </div>
         </div>
       );
@@ -492,7 +492,7 @@ export default function Home() {
             )}
           </div>
         </div>
-        <button className="btn-delete" onClick={() => dispatch(updateTaskRequest({ id: task.id, status: 'deleted' }))}>Sil</button>
+        <button className="btn-delete" onClick={() => dispatch(updateTaskRequest({ id: task.id, status: 'deleted' }))}>{tCommon('delete')}</button>
       </div>
     );
   };

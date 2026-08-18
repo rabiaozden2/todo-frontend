@@ -59,6 +59,9 @@
     "catSports": "Sports",
     "timesUp": "Time is up!",
     "hoursMins": "{hours}h {mins}m",
-    "minsOnly": "{mins} m"
+    "minsOnly": "{mins} m",
+    "restore": "Restore",
+    "deleteForever": "Delete Forever",
+    "confirmDelete": "Are you sure you want to permanently delete this?"
   }
 }

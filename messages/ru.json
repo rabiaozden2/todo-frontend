@@ -59,6 +59,9 @@
     "catSports": "Спорт",
     "timesUp": "Время вышло!",
     "hoursMins": "{hours}ч {mins}м",
-    "minsOnly": "{mins} м"
+    "minsOnly": "{mins} м",
+    "restore": "Восстановить",
+    "deleteForever": "Удалить навсегда",
+    "confirmDelete": "Вы уверены, что хотите навсегда удалить это?"
   }
 }

@@ -59,6 +59,9 @@
     "catSports": "スポーツ",
     "timesUp": "時間切れです！",
     "hoursMins": "{hours}時間 {mins}分",
-    "minsOnly": "{mins} 分"
+    "minsOnly": "{mins} 分",
+    "restore": "元に戻す",
+    "deleteForever": "完全に削除",
+    "confirmDelete": "これを完全に削除してもよろしいですか？"
   }
 }

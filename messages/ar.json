@@ -59,6 +59,9 @@
     "catSports": "رياضة",
     "timesUp": "انتهى الوقت!",
     "hoursMins": "{hours}س {mins}د",
-    "minsOnly": "{mins} د"
+    "minsOnly": "{mins} د",
+    "restore": "استعادة",
+    "deleteForever": "حذف نهائي",
+    "confirmDelete": "هل أنت متأكد أنك تريد حذف هذا نهائياً؟"
   }
 }

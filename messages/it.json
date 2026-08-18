@@ -59,6 +59,9 @@
     "catSports": "Sport",
     "timesUp": "Il tempo è scaduto!",
     "hoursMins": "{hours}o {mins}m",
-    "minsOnly": "{mins} m"
+    "minsOnly": "{mins} m",
+    "restore": "Ripristina",
+    "deleteForever": "Elimina definitivamente",
+    "confirmDelete": "Sei sicuro di voler eliminare definitivamente questo elemento?"
   }
 }

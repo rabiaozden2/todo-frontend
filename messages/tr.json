@@ -59,6 +59,9 @@
     "catSports": "Spor",
     "timesUp": "Süre doldu!",
     "hoursMins": "{hours}s {mins}dk",
-    "minsOnly": "{mins} dk"
+    "minsOnly": "{mins} dk",
+    "restore": "Geri Al",
+    "deleteForever": "Kalıcı Sil",
+    "confirmDelete": "Kalıcı olarak silmek istediğine emin misin?"
   }
 }
