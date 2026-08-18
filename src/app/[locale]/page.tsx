@@ -449,7 +449,7 @@ export default function Home() {
               onChange={e => setEditCategory(e.target.value)} 
               className="datetime-input"
             >
-              {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+              {CATEGORIES.map(c => <option key={c} value={c}>{t(c === 'Eğitim' ? 'catEducation' : c === 'İş' ? 'catWork' : c === 'Kişisel' ? 'catPersonal' : 'catSports') || c}</option>)}
             </select>
             <input 
               type="datetime-local" 
@@ -594,7 +594,7 @@ export default function Home() {
                     <div style={{ flex: 1 }}>
                       <label style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>{t('category')}</label>
                       <select value={newCategory} onChange={e => setNewCategory(e.target.value)} className="datetime-input" style={{ width: '100%' }}>
-                        {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+                        {CATEGORIES.map(c => <option key={c} value={c}>{t(c === 'Eğitim' ? 'catEducation' : c === 'İş' ? 'catWork' : c === 'Kişisel' ? 'catPersonal' : 'catSports') || c}</option>)}
                       </select>
                     </div>
                     <div style={{ flex: 1 }}>
@@ -656,7 +656,7 @@ export default function Home() {
                 const count = activeTasks.filter(t => (t.category || 'Kişisel') === cat).length;
                 return (
                   <div key={cat} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px', borderRadius: '8px', background: 'var(--bg-input)', border: '1px solid var(--border-color)' }}>
-                    <span style={{ fontSize: '0.88rem', fontWeight: 600 }}>{cat}</span>
+                    <span style={{ fontSize: '0.88rem', fontWeight: 600 }}>{t(cat === 'Eğitim' ? 'catEducation' : cat === 'İş' ? 'catWork' : cat === 'Kişisel' ? 'catPersonal' : 'catSports') || cat}</span>
                     <span style={{ background: count > 0 ? 'var(--accent-primary)' : 'var(--border-color)', color: count > 0 ? 'white' : 'var(--text-muted)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 700 }}>
                       {count}
                     </span>
