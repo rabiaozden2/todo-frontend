@@ -34,7 +34,8 @@ export default function Login() {
   };
 
   return (
-    <Box maxW="400px" mx="auto" mt={20} p={8} borderWidth={1} borderRadius="xl" boxShadow="xl" bg="bg.panel">
+    <Box flex={1} display="flex" alignItems="center" justifyContent="center" p={4} overflow="hidden">
+      <Box w="full" maxW="400px" p={8} borderWidth={1} borderRadius="xl" boxShadow="xl" bg="bg.panel">
       <Heading mb={6} textAlign="center" size="2xl">{t('title')}</Heading>
       <VStack gap={5} align="stretch">
         <Field label={tCommon('email')}>
@@ -68,6 +69,7 @@ export default function Login() {
           </ChakraLink>
         </Text>
       </VStack>
+    </Box>
     </Box>
   );
 }
